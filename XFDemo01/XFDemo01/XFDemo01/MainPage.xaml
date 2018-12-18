@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:XFDemo01"
              x:Class="XFDemo01.MainPage">
     <ContentPage.BindingContext>
-        <local:MyData/>
+        <local:MyData x:Name="myData"/>
     </ContentPage.BindingContext>
 
     <StackLayout>
@@ -18,7 +18,7 @@
         <StackLayout Orientation="Horizontal">
             <Label Text="Фамилия:" />
             <Entry x:Name="eLastname" FontSize="10"
-                   Text="{Binding NyLastname}"
+                   Text="{Binding MyLastname, Mode=TwoWay }"
                    Placeholder="Введите свою фамилию"
                    MinimumWidthRequest="20"/>
         </StackLayout>
@@ -27,7 +27,8 @@
            VerticalOptions="CenterAndExpand" />
         <Button Text="Hello" Margin="0,10,0,0" Clicked="Button1_Clicked"/>
         <Button Text="Reset" Margin="0,10,0,0" Clicked="Button2_Clicked"/>
-        <Label Text="{Binding NyLastname}" />
+        <Label x:Name="Label2" Text="{Binding MyLastname, Mode= OneWay}" />
+        <Label x:Name="Label3" Text="{Binding Path=Label1.Text, Mode= OneWay}" />
     </StackLayout>
 
 </ContentPage>
