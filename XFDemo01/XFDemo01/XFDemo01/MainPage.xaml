@@ -27,8 +27,10 @@
            VerticalOptions="CenterAndExpand" />
         <Button Text="Hello" Margin="0,10,0,0" Clicked="Button1_Clicked"/>
         <Button Text="Reset" Margin="0,10,0,0" Clicked="Button2_Clicked"/>
-        <Label x:Name="Label2" Text="{Binding MyLastname, Mode= OneWay}" />
-        <Label x:Name="Label3" Text="{Binding Path=Label1.Text, Mode= OneWay}" />
+        <Label x:Name="Label2" Text="{Binding MyLastname, Mode= OneWay}"
+               HorizontalTextAlignment="Center" />
+        <Label x:Name="Label3" Text="{Binding Path=MyLastname, Mode= OneWay}"
+               HorizontalTextAlignment="Center" />
     </StackLayout>
 
 </ContentPage>
